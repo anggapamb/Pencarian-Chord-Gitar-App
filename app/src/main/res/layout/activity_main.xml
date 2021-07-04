@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:background="@drawable/background_main"
+            android:orientation="vertical">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="@dimen/_75sdp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:lottie_rawRes="@raw/music"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textChordQu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="@string/chord_qu"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_25ssp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <EditText
+                    android:id="@+id/editTextJudulLagu"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:background="@drawable/background_edittext"
+                    android:hint="@string/masukan_judul_lagu"
+                    android:inputType="text"
+                    android:padding="@dimen/_12sdp" />
+
+                <ImageView
+                    android:id="@+id/imgClear"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:visibility="gone"
+                    android:layout_gravity="end|center"
+                    android:layout_marginEnd="@dimen/_28sdp"
+                    android:src="@drawable/ic_baseline_delete_24"/>
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btnCariChord"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:backgroundTint="#f46b45"
+                android:text="@string/cari"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+                app:layout_constraintVertical_bias="0.235" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvKunciGitar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:lineSpacingExtra="10sp"
+            android:padding="15dp"
+            android:text="@string/chord_gitar"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+    </LinearLayout>
+
+</ScrollView>

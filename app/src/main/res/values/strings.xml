@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Chord.Qu</string>
+    <string name="chord_qu">Chord.Qu</string>
+    <string name="masukan_judul_lagu">Masukan judul yang spesifik..</string>
+    <string name="cari">Cari Chord</string>
+    <string name="chord_gitar">Chord Gitar</string>
+</resources>
